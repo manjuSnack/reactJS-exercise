@@ -1,0 +1,166 @@
+---
+
+ReactJS
+
+설치, 에러, 실습에 어려운 사항들 메모
+
+---
+
+🥞 React for Beginners
+
+-🥞 Theory
+
+JSX
+State
+Props
+Class Components
+Data Fetching
+Routing
+
+---
+
+🥞 Learn by Building 10 Hooks
+
+-🥞 Theory
+
+useInput
+useTabs
+useTitle
+useClick
+useConfirm
+usePreventLeave
+useBeforeLeave
+useFadeIn
+useNetwork
+and more...
+
+---
+
+🥞 GraphQL, React for Beginners
+
+-🥞 Theory
+
+React
+GraphQL
+Apollo
+React Router
+
+-🥞 Function
+Replace Redux
+Replace Fetch
+Get Movies
+See Movie
+Add to Favourites
+
+---
+
+🥞 Typescript, Recoil, Framer Motion
+
+-🥞 Theory
+
+Routing
+State Management
+Data Fetching
+Animations
+Typescript
+
+-🥞 Using package
+
+React Router
+Styled Components
+Recoil
+Apex Charts
+Reat Hook Form
+Typescript
+Framer Motion
+Beatiful DnD
+React Query
+
+---
+
+🥞 React Firebase for Beginners
+
+-🥞 Theory
+
+Firebase
+Cloud Firestore
+NoSQL Realtime, Query, Filter
+Firebase Authentication
+Google Cloud Storage
+
+-🥞 Functions
+
+Email, Google, Github, Social Authentication
+Tweet CRUD
+Protected Pages
+Profile Page
+File Upload
+Deploy
+API Key Security
+
+---
+
+🥞 Instargram Full Stack
+
+-🥞 Theory
+
+--🥞 Users
+
+Email Login
+User Profile
+Follow / Unfollow
+Direct Messages
+
+--🥞 Photos
+
+Search Photo
+Like Photo
+Commet on Photos
+Photo Feed
+Upload Photo
+
+--🥞 App
+
+Navigation
+Camera
+Permissions
+Media Library
+Geolocation
+
+--🥞 Deployment
+
+Heroku
+Netlify
+
+---
+
+🥞 ReactJS Beginners
+
+🥞 2.1 Before React
+
+ReactJS 설정
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+: react, react-dom을 사용할 수 있도록 설정
+
+react
+: ReactJS Engine. UI를 제작해준다.
+
+react-dom
+: React Element를 HTML에 생성해준다. 
+
+🥞 2.2 Our First React Element
+
+🥞 2.3 Event in React, 2.4 Recap
+
+🥞 2.5 JSX 
+
+JSX
+: a Syntax extension to JavaScript
+
+Babel ( @babel/standalone )을 통해 JSX를 변환해 준다.
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel> ... </script>
