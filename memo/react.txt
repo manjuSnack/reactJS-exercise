@@ -164,3 +164,7 @@ Babel ( @babel/standalone )을 통해 JSX를 변환해 준다.
 
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel> ... </script>
+
+🥞 2.6 JSX part Two
+
+Components는 첫 문자를 대문자로 작성할 것. 소문자는 HTML 태그로 인식한다.
