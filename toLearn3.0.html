@@ -1,4 +1,4 @@
-<!-- #3.1 setState part One -->
+<!-- #3.0 Understanding State -->
 <!DOCTYPE html>
 <html>
   <body>
@@ -11,22 +11,27 @@
   <script type="text/babel">
     // #2.1 html 참고
     // vanila JS → React JS
-    // toLearn3.0.html에서 개선
     const root = document.getElementById("root");
 
-    function App() {
-      // const data = React.useState(666); // 아무 값이 없을 땐 초기값은 [undefined, f]
-      // console.log(data); // [666, f]  f는 첫 번째 index의 값을 바꿔주는 함수
-      const [counter, modifier] = React.useState(0); // ES6
-      return (
-        <div>
-          <h3>Total clicks: {data[0]}</h3>
-          <button>Click me</button>
-        </div>
-      );
+    let counter = 0;
+
+    function countUp() {
+      counter = counter + 1;
+      render();
     }
+
+    function render() {
+      ReactDOM.render(<Container />, root); // 페이지를 갱신
+    }
+
+    const Container = () => (
+      <div>
+        <h3>Total clicks: {counter}</h3>
+        <button onClick={countUp}>Click me</button>
+      </div>
+    );
     // ReactDOM.render(Container, root); // Object를 가져올 때
     // ReactDOM.render(<Container />, root); // Function을 가져올 때
-    ReactDOM.render(<App />, root);
+    render();
   </script>
 </html>

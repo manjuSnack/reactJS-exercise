@@ -6,9 +6,9 @@ ReactJS
 
 ---
 
-🥞 React for Beginners
+🍫 React for Beginners
 
--🥞 Theory
+-# Theory
 
 JSX
 State
@@ -19,9 +19,9 @@ Routing
 
 ---
 
-🥞 Learn by Building 10 Hooks
+🍫 Learn by Building 10 Hooks
 
--🥞 Theory
+-# Theory
 
 useInput
 useTabs
@@ -36,16 +36,16 @@ and more...
 
 ---
 
-🥞 GraphQL, React for Beginners
+🍫 GraphQL, React for Beginners
 
--🥞 Theory
+-# Theory
 
 React
 GraphQL
 Apollo
 React Router
 
--🥞 Function
+-# Function
 Replace Redux
 Replace Fetch
 Get Movies
@@ -54,9 +54,9 @@ Add to Favourites
 
 ---
 
-🥞 Typescript, Recoil, Framer Motion
+🍫 Typescript, Recoil, Framer Motion
 
--🥞 Theory
+-# Theory
 
 Routing
 State Management
@@ -64,7 +64,7 @@ Data Fetching
 Animations
 Typescript
 
--🥞 Using package
+-# Using package
 
 React Router
 Styled Components
@@ -78,9 +78,9 @@ React Query
 
 ---
 
-🥞 React Firebase for Beginners
+🍫 React Firebase for Beginners
 
--🥞 Theory
+-# Theory
 
 Firebase
 Cloud Firestore
@@ -88,7 +88,7 @@ NoSQL Realtime, Query, Filter
 Firebase Authentication
 Google Cloud Storage
 
--🥞 Functions
+-# Functions
 
 Email, Google, Github, Social Authentication
 Tweet CRUD
@@ -100,18 +100,18 @@ API Key Security
 
 ---
 
-🥞 Instargram Full Stack
+🍫 Instargram Full Stack
 
--🥞 Theory
+-# Theory
 
---🥞 Users
+--# Users
 
 Email Login
 User Profile
 Follow / Unfollow
 Direct Messages
 
---🥞 Photos
+--# Photos
 
 Search Photo
 Like Photo
@@ -119,7 +119,7 @@ Commet on Photos
 Photo Feed
 Upload Photo
 
---🥞 App
+--# App
 
 Navigation
 Camera
@@ -127,16 +127,16 @@ Permissions
 Media Library
 Geolocation
 
---🥞 Deployment
+--# Deployment
 
 Heroku
 Netlify
 
 ---
 
-🥞 ReactJS Beginners
+# ReactJS Beginners
 
-🥞 2.1 Before React
+# 2.1 Before React
 
 ReactJS 설정
 
@@ -151,11 +151,11 @@ react
 react-dom
 : React Element를 HTML에 생성해준다. 
 
-🥞 2.2 Our First React Element
+# 2.2 Our First React Element
 
-🥞 2.3 Event in React, 2.4 Recap
+# 2.3 Event in React, 2.4 Recap
 
-🥞 2.5 JSX 
+# 2.5 JSX 
 
 JSX
 : a Syntax extension to JavaScript
@@ -165,6 +165,12 @@ Babel ( @babel/standalone )을 통해 JSX를 변환해 준다.
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel> ... </script>
 
-🥞 2.6 JSX part Two
+# 2.6 JSX part Two
 
 Components는 첫 문자를 대문자로 작성할 것. 소문자는 HTML 태그로 인식한다.
+
+# 3 STATE, #3.0~3.1 Understanding State, setState part One
+
+ReactDOM.render( )
+
+: 전체가 아닌 바뀐 부분만 바꾸고 렌더링, 리렌더링한다. 
