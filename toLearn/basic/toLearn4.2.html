@@ -1,3 +1,4 @@
+<!-- #4.2 Prop Types -->
 <!DOCTYPE html>
 <html>
   <body>
@@ -20,6 +21,7 @@
             padding: "10px 20px",
             border: 0,
             borderRadius: 10,
+            // fontSize: props.fontSize,
             // fontSize: fontSize,
             fontSize,
           }}
@@ -54,15 +56,18 @@
 
 <!-- 
 
-props
+prop types
+: <script src="https://www.unpkg.com/prop-types@15.8.1/prop-types.js"></script> 추가한 뒤
+prop의 타입을 정해 틀릴 경우 알려줄 수 있는 함수를 작성할 수 있다.
 
-부모 Component에서 return <Btn contentText="Save Changes"/>
-: Btn({contentText:"Save Changes"})와 같다. 이때 contentText는 임의로 작성할 수 있고 Btn 함수에 arguemnt로 건네줄 수 있다.
+부모 Component 혹 함수.propTypes = {
+    property: PropTypes.string,
+    property: PropTypes.number,
+    ...
+}
+로 작성 후 오타 실수 등을 console에 알려줄 수 있게 해준다.
 
-Memo
-const memo = React.memo(자식 Component);
-: 부모 Component내 <memo prop={value} function prop={value}/>와 같이 작성한다.
-부모 Conponent 내에서 변경되는 요소가 있으면 .render()를 호출할 때 다시 그리는데, 이때 성능저하가 발생한다.
-이를 해결하기 위해 .memo()를 통해 변경되지 않는 요소는 다시 그리지 않게 할 수 있다. 
+.reRequired
+: prop 작성을 필수로 작성하게 유도할 수 있다.
 
  -->

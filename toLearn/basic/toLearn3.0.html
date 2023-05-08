@@ -4,29 +4,22 @@
   <body>
     <div id="root"></div>
   </body>
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <!-- Babel : JSX → Original -->
   <script type="text/babel">
-    // #2.1 html 참고
-    // vanila JS → React JS
     const root = document.getElementById("root");
-
     let counter = 0;
-
     function countUp() {
       counter = counter + 1;
       render();
     }
-
     function render() {
-      ReactDOM.render(<Container />, root); // 페이지를 갱신
+      ReactDOM.render(<Container />, root);
     }
-
     const Container = () => (
       <div>
-        <h3>Total clicks: {counter}</h3>
+        <h3>Total Clicks : {counter}</h3>
         <button onClick={countUp}>Click me</button>
       </div>
     );
@@ -35,3 +28,10 @@
     render();
   </script>
 </html>
+
+<!-- Understanding State
+
+rerendering
+: ReactDOM.render()는 일회성이라 갱신이 필요한 경우 추가로 작성해야 한다.
+
+ -->

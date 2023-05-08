@@ -1,0 +1,108 @@
+<!-- #2.6 JSX part Two -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Babel : JSX → Original -->
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    // JSX
+    const Title = () => (
+      <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+        Hello I'm a title
+      </h3>
+    );
+
+    // 위의 Arrow Function을 Function으로 작성할 때
+    // function Title() {
+    //   return (
+    //     <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>
+    //       Hello I'm a title
+    //     </h3>
+    //   );
+    // }
+
+    const Button = () => (
+      <button
+        style={{ background: "tomato" }}
+        onClick={() => console.log("im clicked")}
+      >
+        Click me
+      </button>
+    );
+    // const container = React.createElement("div", null, [h3, btn]);
+    // 위에 Title과 Button은 Arrow Function 혹 Function으로 만든 후 아래처럼 <Title />, <Button />으로 작성.
+    const Container = (
+      <div>
+        <button>Hello</button>
+        <Title />
+        <Button />
+      </div>
+    );
+    ReactDOM.render(Container, root);
+  </script>
+</html>
+
+<!-- VanilaJS 
+: JavaScript 학습내용 참고
+-->
+
+<!-- # ReactJS 
+: javascript에서 html document를 만들어 추가한다.
+
+react@18
+: Reactjs를 사용하기 편하게 해주는 Core인 library
+
+react-dom@18
+: React Element를 HTML Document에 넣어주는 library
+
+# React JS 작성방법 ① : Original
+const HTML변수 = document.getElementById() 또는 .querySelector()
+const React변수 = React.createElement("tag", { property }, "content" 또는 배열[ ])
+"tag" 
+: HTML Document의 태그를 생성한다.
+
+{ property } 
+: id, class와 CSS, .addEventListener를 꾸며줄 style 등을 지정한다.
+
+"content" 
+: 태그 사이에 내용을 지정한다.
+
+배열 []
+: .appendChild()와 비슷한 역할을 하며 생성할 해당 태그 안에 넣을 태그들을 순서대로 지정할 수 있다.
+
+ReactDOM.render(React변수, HTML변수)
+: 생성한 'React변수'를 HTML Document에 HTML 변수와 같은 id인 태그에 추가한다.
+
+# React JS 작성방법 ② : JSX
+
+<script type ="text/babel">
+: babel을 통해 번역할 script의 타입을 지정
+
+const React변수 = () => ( <tag id="id-Name" style={ { property:value } } event={ ... } >Content</tag> )
+: HTML Document에서 작성하는 것과 같이 작성할 수 있지만 { property }의 바깥에 중괄호 { }를 하나 더 추가할 것.
+
+이때 React변수는 첫 글자가 대문자이어야 한다.
+
+const Container = ( <div><React 변수/></div> );
+: <React변수/>로 작성하여야 ReactDOM.render()에 추가할 수 있다. 
+이때 <React변수 />는 Arrow function 혹 function을 나타낸다.
+
+
+
+---cut---
+
+React.createElement에서의 .addEventListener
+: ReactJS에서는 더 간단히 작성할 수 있다.
+
+onClick: () => ... 혹은 onClick:{함수}
+: "click" event
+
+onMouseEnter: () =>  ... 혹은 onMouseEnter: {함수}
+: "onmouse" event
+
+-->

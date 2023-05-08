@@ -1,0 +1,50 @@
+<!-- #4.0 props -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // function Btn(props) {
+    function Btn({ contentText, big }) {
+      // 함수({ 변수명 })을 작성하면 아래 {props.contentText} → {contentText}로 고칠 수 있다.
+      // console.log(props);
+      return (
+        <button
+          style={{
+            backgroundColor: "tomato",
+            color: "white",
+            padding: "10px 20px",
+            border: 0,
+            borderRadius: 10,
+            fontSize: big ? 18 : 16,
+          }}
+        >
+          {contentText}
+        </button>
+      );
+    }
+    function App() {
+      return (
+        <div>
+          <Btn contentText="Save Changes" big={true} />
+          <Btn contentText="Continue" big={false} />
+        </div>
+      );
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
+
+<!-- 
+
+props
+
+부모 Component에서 return <Btn contentText="Save Changes"/>
+: Btn({contentText:"Save Changes"})와 같다. 이때 contentText는 임의로 작성할 수 있고 Btn 함수에 arguemnt로 건네줄 수 있다.
+
+ -->

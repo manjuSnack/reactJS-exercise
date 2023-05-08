@@ -138,8 +138,8 @@ Netlify
 
 # 2.1 Before React
 
-ReactJS 설정
-
+# <script>태그에 ReactJS 추가해 사용하기
+  
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
@@ -169,8 +169,37 @@ Babel ( @babel/standalone )을 통해 JSX를 변환해 준다.
 
 Components는 첫 문자를 대문자로 작성할 것. 소문자는 HTML 태그로 인식한다.
 
-# 3 STATE, #3.0~3.1 Understanding State, setState part One
+# 3 STATE, #3.0~3.9 Understanding State / setState part One, Two / Recap / State Functions / Inputs and State, State Practice part One, Two  /
+Recap, Final Practice and Recap
 
 ReactDOM.render( )
 
 : 전체가 아닌 바뀐 부분만 바꾸고 렌더링, 리렌더링한다. 
+
+# 4 PROPS, #4.0 Props
+
+# 4.1 Memo
+
+# 4.2 Prop types
+
+prop-types 추가하기
+
+<script src="https://www.unpkg.com/prop-types@15.8.1/prop-types.js"></script>
+
+--🥤 unpkg.com에서 script 간편하게 가져오기
+
+unpkg.com/:package@:version/:file
+
+: npm에 목록을 확인한 뒤 위에 작성법을 보고 <script src="">에 작성하면 된다.
+
+# 4.3 Recap
+
+# 5 CREATE REACT APP, #5.0~5.1 Introduction, Tour of CRA
+
+# CLI로 React Project 생성
+
+npx create-react-app <my-app>
+: <my-app>은 Directory 이름으로 임의로 작성하면 그 폴더에 프로젝트를 생성한다.
+
+npm run start
+: React Server를 실행한다.

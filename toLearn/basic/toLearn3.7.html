@@ -1,0 +1,71 @@
+<!-- #3.7 State Practice part Two -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // 시간 변경
+    function App() {
+      // const [minutes, setMinutes] = React.useState();
+      const [amount, setAmount] = React.useState(0); // default 값으로 0을 강제로 지정
+      const [flipped, setFlipped] = React.useState(false);
+      const onChange = (event) => {
+        // console.log("somebody wrote");
+        // console.log(event.target.value);
+        setAmount(event.target.value);
+      };
+      const reset = () => setAmount(0);
+      // const onFlip = () => setFlipped(!flipped); // true → false, false → true
+      const onFlip = () => {
+        reset();
+        setFlipped((current) => !current);
+      };
+      return (
+        <div>
+          <h1>Super Converter</h1>
+          <div>
+            <label htmlFor="minutes">Minutes</label>
+            <input
+              id="minutes"
+              type="number"
+              placeholder="minutes"
+              onChange={onChange}
+              value={flipped ? amount * 60 : amount}
+              disabled={flipped === true}
+            />
+          </div>
+          <div>
+            <label htmlFor="hours">Hours</label>
+            <input
+              id="hours"
+              type="number"
+              placeholder="hours"
+              value={flipped ? amount : Math.round(amount / 60)}
+              disabled={flipped === false}
+              onChange={onChange}
+            />
+          </div>
+          <button onClick={reset}>Reset</button>
+          <button onClick={onFlip}>Flip</button>
+        </div>
+      );
+    }
+    const root = document.getElementById("root");
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
+
+<!-- Inputs and State
+
+for, class
+: JavaScript에서 쓰이는 용어이기 때문에, JSX문법에 label의 for는 'htmlFor'로 고쳐서 적어야 한다.
+
+# JSX에서 input에 조건식 대입
+: disabled={flipped === false} : flipped( boolean값인 변수)가 false인 경우에는 disabled를 활성화한다는 뜻.
+: disabled={!flipped}와 같은 조건식이다.
+
+ -->

@@ -1,0 +1,50 @@
+<!-- #3.4 State Functions -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    function App() {
+      const [counter, setCounter] = React.useState(0);
+      const onClick = () => {
+        // setCounter(counter + 1);
+        setCounter((current) => current + 1); // 위에 작성과 같고 버그를 더 줄일 수 있는 방법이다.
+      };
+      console.log("rendered");
+      console.log(counter);
+      return (
+        <div>
+          <h3>Total Clicks : {counter}</h3>
+          <button onClick={onClick}>Click me</button>
+        </div>
+      );
+    }
+    ReactDOM.render(<App />, root);
+  </script>
+</html>
+
+<!-- 
+# Understanding State
+
+rerendering
+: ReactDOM.render()는 일회성이라 갱신이 필요한 경우 추가로 작성해야 한다.
+
+# setState 
+
+React.setState("배열 idx")
+: 출력하면 [undefined, f]를 얻는데, 이때 idx[0]은 value, idx[1]은 수행할 함수를 뜻한다.
+: f()를 변수에 담아 호출하여 이벤트에 따른 값을 넣거나 고치는 등 상태를 변경할 수 있다. 변경 후엔 rerendering을 한다.
+: 위에 예제 참고할 것
+
+# State를 변경하는 방법 ① - 직접 값을 지정
+# : Event 함수 내에서 예, setCounter(counter + 1) : setCouter는 setState()의 idx[1]에 해당, counter는 setState()의 idx[0]에 해당한다.
+
+# State를 변경하는 방법 ③ - State Functions
+# : 방법 ① 보다는 setCounter((current) => current + 1) : parameter로 받아 이를 수정하는 것이 더 버그를 줄일 수 있는 방법이다.
+
+ -->

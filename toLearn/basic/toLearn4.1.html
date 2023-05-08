@@ -1,3 +1,4 @@
+<!-- #4.1 Memo -->
 <!DOCTYPE html>
 <html>
   <body>
@@ -5,11 +6,10 @@
   </body>
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-  <script src="https://www.unpkg.com/prop-types@15.8.1/prop-types.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // function Btn(props) {
-    function Btn({ contentText, onClick, fontSize }) {
+    function Btn({ contentText, onClick }) {
       console.log(contentText, "was rendered");
       return (
         <button
@@ -20,8 +20,6 @@
             padding: "10px 20px",
             border: 0,
             borderRadius: 10,
-            // fontSize: fontSize,
-            fontSize,
           }}
         >
           {contentText}
@@ -29,21 +27,13 @@
       );
     }
     const MemorizedBtn = React.memo(Btn);
-    Btn.propTypes = {
-      contentText: PropTypes.string.isRequired,
-      fontSize: PropTypes.number.isRequired,
-    };
     function App() {
       const [value, setValue] = React.useState("Save Changes");
       const changeValue = () => setValue("Revert Changes");
       return (
         <div>
-          <MemorizedBtn
-            contentText={value}
-            onClick={changeValue}
-            fontSize={18}
-          />
-          <MemorizedBtn contentText={14} fontSize={"Continue"} />
+          <MemorizedBtn contentText={value} onClick={changeValue} />
+          <MemorizedBtn contentText="Continue" />
         </div>
       );
     }
@@ -62,7 +52,7 @@ props
 Memo
 const memo = React.memo(자식 Component);
 : 부모 Component내 <memo prop={value} function prop={value}/>와 같이 작성한다.
-부모 Conponent 내에서 변경되는 요소가 있으면 .render()를 호출할 때 다시 그리는데, 이때 성능저하가 발생한다.
-이를 해결하기 위해 .memo()를 통해 변경되지 않는 요소는 다시 그리지 않게 할 수 있다. 
+부모 Conponent 내에서 변경되는 요소가 있으면 .render()를 호출할 때 다시 그리는데, 
+.memo()를 통해 변경되지 않는 요소는 다시 그리지 않게 할 수 있다.
 
  -->
